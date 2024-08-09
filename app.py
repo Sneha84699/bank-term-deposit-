@@ -13,15 +13,15 @@ from math import sqrt
 import pickle
 
 def main():
-    st.title("Health insurance")
-    st.sidebar.title("Health insurance")
+    st.title("Term Deposite")
+    st.sidebar.title("Term Deposite")
     # st.markdown("Lets Detect Health insurance EMI")
     # st.sidebar.markdown("Lets Detect Health insurance EMI")
 
 #---- load data---
     st.cache(persist=True)
     def load_data():
-        data=pd.read_csv("medical-health-insurance.csv")
+        data=pd.read_csv("bank_1.csv")
         return data
 
     st.cache(persist=True)
