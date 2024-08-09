@@ -26,7 +26,7 @@ def main():
 
     st.cache(persist=True)
     def split(df):
-        x=pd.get_dummies(data=df,columns=["job", "marital", "education", "contact", "month", "poutcome"],drop_first=True,dtype="int64")
+        x=pd.get_dummies(data=df,columns=["job", "marital", "education", "contact", "month", "poutcome",'default','housing','loan'],drop_first=True,dtype="int64")
         x.drop(["deposit"],axis=1,inplace=True)
         y=df["deposit"]
         #_________#
