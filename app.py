@@ -28,7 +28,7 @@ def main():
     def split(df):
         x=pd.get_dummies(data=df,columns=["job", "marital", "education", "contact", "month", "poutcome",'default','housing','loan'],drop_first=True,dtype="int64")
         x.drop(["deposit"],axis=1,inplace=True)
-        y=df["deposit"]
+        y=df["deposit"].map({"yes":1,"no":0})
         #_________#
         x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=0)
         return x_train,x_test,y_train,y_test
