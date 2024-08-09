@@ -103,10 +103,10 @@ def main():
             st.write("Charges",y_pred_lr)
             
     if st.sidebar.checkbox("Show Training data",False):
-        st.subheader("Health Insurance")
+        st.subheader("Term Depsoite")
         st.write(x_train)
     if st.sidebar.checkbox("Show raw data",False):
-        st.subheader("Health Insurance")
+        st.subheader("Term Deposite")
         st.write(df)
 
     
